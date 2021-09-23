@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9rem;
+}
+
+.todo-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 1em auto;
+  padding: 0 3em;
+  border: 1px solid #9b9c9b;
+  -webkit-box-shadow: 5px 5px #bebebe, 10px 10px #eeeded, 15px 15px #bebebe;
+          box-shadow: 5px 5px #bebebe, 10px 10px #eeeded, 15px 15px #bebebe;
+}
+
+.todo-header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.todo-header p {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0;
+}
+
+.todo-header .todo-input {
+  width: 100%;
+  padding: .5rem;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.125rem;
+  border: 0;
+  margin-bottom: .5rem;
+}
+
+.todo-header .todo-input:focus {
+  outline: none;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px auto 150px 30px;
+      grid-template-columns: 20px auto 150px 30px;
+  gap: .5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select-color {
+  padding: .3rem .5rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+.btn-delete {
+  padding: .5rem;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.todo-footer {
+  margin: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+}
+
+.todo-actions,
+.todo-remain,
+.todo-filter-by-status,
+.todo-filter-by-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo-remain {
+  text-align: center;
+}
+
+.color-block {
+  width: 10px;
+  height: 5px;
+  border: 1px;
+}
+
+h4 {
+  margin: 0;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.btn {
+  margin-bottom: .5rem;
+  padding: .3rem .5rem;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+}
+
+.btn-light {
+  background-color: #fff;
+  border: 0;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  font-weight: 700;
+  border: 1px solid #000;
+}
+/*# sourceMappingURL=index.css.map */

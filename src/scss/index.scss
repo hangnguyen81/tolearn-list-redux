@@ -1,0 +1,120 @@
+@import 'variables';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    font-size: $fs-body;
+}
+
+.todo-container{
+    max-width: 800px;
+    width: 100%;
+    margin: 1em auto;
+    padding: 0 3em;
+    border: 1px solid rgb(155, 156, 155);
+    box-shadow: 5px 5px rgb(190, 190, 190), 10px 10px rgb(238, 237, 237), 15px 15px rgb(190, 190, 190);
+    
+}
+// Header section
+.todo-header{
+    
+    h1{
+        text-align: center;
+        font-size: $fs-h1;
+        margin-bottom: 0;
+    }
+
+    p{
+        text-align: center;
+        font-size: 0.85rem;
+        margin-top: 0;
+    }
+
+    .todo-input{
+        width: 100%;
+        padding: .5rem;
+        font-family: $font-stack;
+        font-size: $fs-h4;
+        border: 0;
+        margin-bottom: .5rem;
+    }
+
+    .todo-input:focus{
+        outline: none;
+        border-bottom: 1px solid #eee;
+    }
+}
+// Todo list section
+.todo-item{
+    display: grid;
+    grid-template-columns: 20px auto 150px 30px;
+    gap: .5rem;
+    align-items: center;
+}
+
+.select-color{
+    padding: .3rem .5rem;
+    font-family: $font-stack;
+}
+
+.btn-delete {
+    padding: .5rem;
+    background-color: $bg-color;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+// Footer section
+.todo-footer{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+}
+
+.todo-actions,
+.todo-remain,
+.todo-filter-by-status,
+.todo-filter-by-color{
+    display: flex;
+    flex-direction: column;
+}
+.todo-remain{
+    text-align: center;
+}
+
+.color-block{
+    width: 10px;
+    height: 5px;
+    border: 1px;
+}
+h4{
+    margin: 0;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.btn{
+    margin-bottom: .5rem;
+    padding: .3rem .5rem;
+    cursor: pointer;
+    font-family: $font-stack;
+}
+
+.btn-light{
+    background-color: $bg-color;
+    border: 0
+}
+
+.btn-light:hover,
+.btn-light:focus{
+    font-weight: 700;
+    border: 1px solid $text-color;
+}
