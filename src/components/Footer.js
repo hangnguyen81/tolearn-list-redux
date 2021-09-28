@@ -1,7 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import {StatusFilters, 
-        changeStatusFilter,
-        changeColorFilter} from '../features/filters/filtersSlice';
 import { completeAll,clearCompletedItem } from "../features/todos/todosSlice";
 import { availableColors, capitalize } from '../features/filters/colors';
 
@@ -33,35 +30,11 @@ const ColorsFilter = () =>{
   </div>
   )
 }
-/*
-const StatusFilter = ({ value: status, onChange }) => {
-    const renderedFilters = Object.keys(StatusFilters).map((key) => {
-      const value = StatusFilters[key]
-      const handleClick = () => onChange(value)
-      const className = value === status ? 'selected' : ''
-  
-      return (
-        <li key={value}>
-          <button className={`btn btn-light ${className}`} onClick={handleClick}>
-            {key}
-          </button>
-        </li>
-      )
-    })
-  
-    return (
-        <div className='todo-filter-by-status'>
-            <h4>Filter by Status</h4>
-            <ul>{renderedFilters}</ul>
-      </div>
-    )
-  }
-*/
+
 
 const Footer = () =>{
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
-    //const { status, colors } = useSelector((state) => state.filters)
 
     const remainTodos = todos.filter(todo => todo.completed === false)
     const handleMarkAll = () => dispatch(completeAll())
@@ -79,8 +52,10 @@ const Footer = () =>{
             <TodoRemain count={remainTodos}/>
             <div className='todo-filter-by-status'>
                 <h4>Filter by Status</h4>
+                <button className='btn btn-light' value='All'> All</button>
+                <button className='btn btn-light' value='Active'> Active</button>
+                <button className='btn btn-light' value='Completed'> Completed</button>
             </div>
-            {/* <StatusFilter value={status} onChange={onStatusChange} /> */}
             <ColorsFilter />
         </div>
         </>

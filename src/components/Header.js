@@ -18,14 +18,18 @@ const Header = () =>{
     return(
         <div className='todo-header'>
             <h1>Your TO-LEARN list</h1>
-            <p>App created with React and Redux @Hang Nguyen - 2021 </p>         
-            <input className='todo-input'
-                type='text'
-                value={todoInput}
-                onChange = {handleChange}
-                onKeyDown={handleKeyDown}
-                placeholder='What should I learn next?'
-            />
+            <p>App created with React and Redux @Hang Nguyen - 2021 </p>  
+            <div className='todo-header-input'>
+                <input className='todo-input'
+                    type='text'
+                    value={todoInput}
+                    onChange = {handleChange}
+                    onKeyDown={handleKeyDown}
+                    placeholder='What should I learn next?'
+                />
+                
+            </div>
+
         </div>
     )
 }
