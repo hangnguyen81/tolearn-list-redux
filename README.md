@@ -1,5 +1,5 @@
 # TO-LEARN LIST 
-(No puppy was killed, I swear :P) 
+(No puppy was killed, I swear :P) I do this project when following [tutorials of Redux](https://redux.js.org/tutorials/index) 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I installed some dependencies such as: redux, @reduxjs/toolkit, react-redux; miragejs (mock API tools), faker and seedrandom. 
 
